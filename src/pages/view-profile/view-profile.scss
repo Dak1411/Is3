@@ -1,0 +1,113 @@
+page-view-profile {
+    
+    .user-image{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-top: 5px;
+    }
+    .user-name{
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        font-size: medium
+    }
+    .user-role{
+        margin-top: 0;
+        color: #D3D3C6;
+        font-size: 15px
+    }
+    .chat-icon{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .accordion-list {
+        background: #fff;
+        height: 100%;
+    }
+    .item-md-primary, .item-divider-md-primary,.item-ios-primary, .item-divider-ios-primary{
+        color: #fff;
+        background-color: rgb(21, 101, 192);
+        letter-spacing: 1px;
+    }
+    .inner-list{
+        margin: 0;
+    }
+    .list-header-md,.list-header-ios{
+        margin-bottom: 0
+    }
+    .label-md,.label-ios{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .item-ios h2{
+        text-transform: none
+    }
+    .display-none{
+        display: none
+    }
+    .margin-top-10{
+        margin-top: 10px;
+    }
+    .manager-label{
+        font-size: 15px;
+        font-weight: bold;
+        color: #000;
+        padding-top: 4px;
+    }
+    .horizontal-line{
+        height: 1px;
+        width: 75%;
+        background: #bebebe;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .down-arrow{
+        float: right;
+        font-size: 30px;
+        position: relative;
+        top: -14px;
+        left: 40px;
+    }
+    .inner-list{
+        margin: 0;
+    }
+    .padding-0{
+        padding: 0
+    }
+    .list-ios > .item-block:first-child,{
+        border: none !important
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+        border: none !important
+    }
+    .list-ios .item-block .item-inner{
+        border: none
+    }
+    .to-upper{
+        text-transform: uppercase;
+    }
+    .field-head{
+        font-size: medium;
+        font-weight: 500;
+    }
+    .field-value{
+        color: #C0C0C0;
+        margin-top: 10px;
+        font-size: 15px;
+        font-family: 'Roboto';
+        text-align: justify;
+        white-space: normal;
+    }
+    .header-md::after,.header-ios::after{
+        background: none !important
+    }
+
+    
+}

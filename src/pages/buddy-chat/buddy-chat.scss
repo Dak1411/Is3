@@ -1,0 +1,103 @@
+page-buddy-chat {
+    .pop-over{
+        width: 5px;
+        height: 20px;
+    }
+    .scroll-content{
+        background-color: rgb(249, 249, 251);
+    }
+    .send-button{
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+    .smiley{
+        width: 30px;
+        height: 30px;
+    }
+    .message-field{
+        border-radius:16px;
+        background:#fff;
+        height: 100%
+    }
+    textarea.text-input{
+        display: inline-block
+    }
+
+
+
+
+
+    .bubble{
+        background-color: #F2F2F2;
+        border-radius: 5px;
+        box-shadow: 0 0 6px #B2B2B2;
+        display: inline-block;
+        padding: 10px 18px;
+        position: relative;
+        vertical-align: top;
+    }
+     
+    .bubble::before {
+        background-color: #F2F2F2;
+        content: "\00a0";
+        display: block;
+        height: 16px;
+        position: absolute;
+        top: 11px;
+        transform:             rotate( 29deg ) skew( -35deg );
+            -moz-transform:    rotate( 29deg ) skew( -35deg );
+            -ms-transform:     rotate( 29deg ) skew( -35deg );
+            -o-transform:      rotate( 29deg ) skew( -35deg );
+            -webkit-transform: rotate( 29deg ) skew( -35deg );
+        width:  20px;
+    }
+     
+    .me {
+        float: left;   
+        margin: 5px 45px 5px 20px;  
+        background: yellow;       
+    }
+     
+    .me::before {
+        box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+        left: -9px;           
+        background: yellow;
+    }
+     
+    .you {
+        float: right;    
+        margin: 5px 20px 5px 45px;    
+        background: red;     
+    }
+     
+    .you::before {
+        box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+        right: -9px;    
+        background: red
+    }
+     
+    .chatwindow {
+        padding-bottom: 70px;
+    }
+
+
+
+
+
+
+
+    .sender-class {
+        float: right;
+        background: #61c7b9 !important;
+        padding: 10px;
+        border-radius: 10px;
+        color:white
+      }
+      .receiver-class{
+        background: #eae8e8 !important;
+        padding: 10px;
+        border-radius: 10px;
+        float: left;
+      }
+}

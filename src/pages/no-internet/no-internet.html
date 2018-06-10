@@ -1,0 +1,14 @@
+<ion-content>
+ <h5 class="top-text">SOMETHING WENT WRONG</h5>
+<div class="broken-net">
+  <img src="assets/imgs/ic_nonet.png">
+</div>
+<p class="bottom-text">Check your connection<br> and try again</p>
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar color="white-color" style="margin-bottom: 10px;">
+      <ion-buttons>
+          <button ion-button round full primary class="retry-button" (click)="retryNetworkCheck()">RETRY</button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

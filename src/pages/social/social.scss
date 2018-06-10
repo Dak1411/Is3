@@ -1,0 +1,15 @@
+page-social {
+    .tabs-md .tabbar,.tabs-ios .tabbar{
+        background: #fff;
+    }
+    .tabs-md .tab-button,.tabs-ios .tab-button{
+        color: #000;
+        font-weight: bold;
+    }
+    .tabs-md .tab-button-text,.tabs-ios .tab-button-text{
+        font-size: 15px
+    }
+    super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button{
+        text-transform: none
+    }
+}   

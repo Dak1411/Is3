@@ -1,0 +1,59 @@
+<ion-menu [content]="content" type="overlay" id="user-menu">
+  <ion-header no-border>
+    <ion-toolbar>
+      <img src="assets/imgs/ic_southend_logo.png" class="width-50 margin-top-10">
+    </ion-toolbar>
+    <div class="user-info" (click)="viewProfile()" menuClose>
+        <ion-row class="padding-top-5"> 
+            <ion-col col-3>
+                    <img src="assets/imgs/ic_avatar.png" class="user-image"> 
+            </ion-col>
+            <ion-col col-7>
+                <div class="padding-top-10">
+                    <!-- Un comment the below lines for apis calls -->
+                        <!-- <label class="user-name"><b>{{userName}}</b></label><br>
+                        <label class="user-designation">{{designation}}</label> -->
+                        <label class="user-name"><b>Anand Raj</b></label><br>
+                        <label class="user-designation">Manager</label>
+                </div>
+            </ion-col>
+            <ion-col col-2 text-center>
+                    <img src="assets/imgs/ic_arrow_forward.png" class="arrow-forward"> 
+            </ion-col>
+        </ion-row>       
+    </div>
+  </ion-header>
+
+  <ion-content scroll="true" scrollbar-y="true"> 
+    <ion-list no-lines class="padding-top-10">
+        <button ion-item menuClose  detail-none (click)="openPageTab('ContactsPage')">
+            <img class="menu-image" [src]="checkActive('ContactPage')? 'assets/imgs/ic_team_menu_selected':'assets/imgs/ic_team_menu.png'" [class.activeHighlight]="checkActive('DashboardPage')" />
+            <h3 class="menu-text" [class.activeHighlight]="checkActive('ContactPage')"> My Team</h3>
+        </button>
+        <button ion-item menuClose  detail-none (click)="openPage('SettingsPage')">
+            <img class="menu-image" [src]="checkActive('SettingsPage')?'assets/imgs/ic_settings_menu_selected.png':' assets/imgs/ic_settings_menu.png'" [class.activeHighlight]="checkActive('DashboardPage')" />
+            <h3 class="menu-text" [class.activeHighlight]="checkActive('SettingsPage')"> Settings</h3>
+        </button>
+        <button ion-item menuClose  detail-none (click)="openPage('KeyinfoPage')">
+            <img class="menu-image" [src]="checkActive('KeyinfoPage')? 'assets/imgs/ic_keyinfo_menu_selected.png':'assets/imgs/ic_keyinfo_menu.png'" [class.activeHighlight]="checkActive('DashboardPage')" />
+            <h3 class="menu-text" [class.activeHighlight]="checkActive('KeyinfoPage')"> Key Info</h3>
+        </button>
+        <button ion-item menuClose  detail-none (click)="openPage('FaqPage')">
+            <img class="menu-image" [src]="checkActive('FaqPage')? 'assets/imgs/ic_faq_menu_selected.png':'assets/imgs/ic_faq_menu.png'" [class.activeHighlight]="checkActive('DashboardPage')" />
+            <h3 class="menu-text" [class.activeHighlight]="checkActive('FaqPage')"> FAQ</h3>
+        </button>
+
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+        <ion-toolbar color="footer">
+            <ion-title text-center>
+                <span class="footer-text">&#xA9; Copyright <b>IS3 Talk</b><br>
+                Powered by <b>Ignitho<sup>TM</sup></b></span>
+            </ion-title>
+        </ion-toolbar>
+      </ion-footer>
+
+      <!-- <user-menu></user-menu> -->
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

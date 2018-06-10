@@ -1,0 +1,33 @@
+page-settings-notification {
+    .toolbar-title-md,.toolbar-title-ios{
+        text-transform: uppercase;
+        font-weight: 400 !important;
+    }
+    .list-header-ios,.list-header-md{
+        color: #000;
+        font-weight: bolder;
+        font-size: medium;
+        text-transform: uppercase;
+        border: none !important
+    }
+    .item-ios,.item-md{
+        margin-top: 10px
+    }
+    .ion-select{
+        color: #C0C0C0
+    }
+    .white-space{
+        white-space: normal !important;
+    }
+    .label-desc{
+        color: #A9a9a9;
+        font-size: 15px;
+        text-align: justify;
+    }
+    .item-ios.item-block .item-inner,.item-md.item-block .item-inner{
+        border-bottom: 0.55px solid #ededed !important;
+    }
+    .select-ios .select-icon,.select-md .select-icon{
+        display: none 
+    }
+}

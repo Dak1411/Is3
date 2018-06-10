@@ -1,0 +1,28 @@
+<ion-content class="privacy-body">
+    <div class="margin-20">
+        <h5 class="privacy-head">What is Lorem Ipsum</h5>
+        <p class="privacy-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h5 class="privacy-head margin-top-35">Why do we use it</h5>
+        <p class="privacy-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="margin-too-35">
+          <img src="assets/imgs/ic_divider.png" class="privacy-divider"/>
+        </div>
+        
+    </div>
+    <div style="margin-top: 15px">
+        <ion-list>
+            <ion-item class="border-none">
+              <ion-label class="terms-text">I have read and understood all the terms and conditions and security measures associated with IS3 Talk. </ion-label>
+              <ion-checkbox [(ngModel)]="termsAccepted" class="check-box"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar color="footer">
+      <ion-buttons right>
+          <button ion-button icon-only class="proceed-button" [disabled]="!termsAccepted" (tap)="viewPopUp()">PROCEED</button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

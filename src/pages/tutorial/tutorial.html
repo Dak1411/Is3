@@ -1,0 +1,45 @@
+<ion-content no-bounce style="background: url('assets/imgs/ic_tutorial_bg.png')">
+    <ion-slides #slides [pager]="showPager" (ionSlideDrag)="slideMoved()" (ionSlideDidChange)="slideChanged()">
+        <ion-slide style="margin-top: -10px;">
+            <img src="assets/imgs/ic_tutorial_one.png" class="slider-image" [@bounce]='state' (@bounce.done)="animationDone($event)"
+            />
+            <div [@bounce]='state'>
+                <h2 class="slider-title">STAY CONNECTED</h2>
+                <img src="assets/imgs/ic_divider.png" class="slider-divider">
+                <p class="slider-text">We encourage users to stay in touch with the care team and maintain good relationship.</p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/imgs/ic_tutorial_two.png" class="slider-image" [@bounce]='state' (@bounce.done)="animationDone($event)">
+            <div [@bounce]='state'>
+                <h2 class="slider-title">SECURE MESSAGING</h2>
+                <img src="assets/imgs/ic_divider.png" class="slider-divider">
+                <p class="slider-text">We help you to communicate effectively through Integrated Secure Social Service Chat.</p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/imgs/ic_tutorial_three.png" class="slider-image" [@bounce]='state' (@bounce.done)="animationDone($event)">
+            <div [@bounce]='state'>
+                <h2 class="slider-title">REAL TIME NOTIFICATION</h2>
+                <img src="assets/imgs/ic_divider.png" class="slider-divider">
+                <div style="margin:0 15px">
+                    <p class="slider-text" style="margin-bottom:0px">We help you to keep a real time track of your Broadcast and message updates.</p>
+                </div>
+                <div>
+                    <!-- <button ion-button round full class="get-started" (tap)="navigatePinRetrieval()" >Get Started</button> -->
+                </div>
+            </div>
+        </ion-slide>
+        
+    </ion-slides>
+    <div class="skip-button" *ngIf="skipButton">
+            <button ion-button icon-only (click)="navigatePinRetrieval()" clear>Skip</button>
+    </div>
+    <ion-footer no-border *ngIf="!showPager">
+        <ion-toolbar color="footer">
+            <button ion-button round full class="get-started" (tap)="navigatePinRetrieval()" >Get Started</button>
+        </ion-toolbar>
+      </ion-footer>
+</ion-content>

@@ -1,0 +1,25 @@
+page-securekey {
+    .pin-button{
+        height: 60px;
+        width: 100%;
+        border-radius: 30px;
+        background: #1565c0 !important;
+        color: #fff !important;
+        letter-spacing: 1px;
+    }
+    .logo{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 60%;
+        top: 10%;
+    }
+    p{
+        bottom: 50px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        color: #8694a5;
+    }
+}

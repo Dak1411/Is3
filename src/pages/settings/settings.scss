@@ -1,0 +1,18 @@
+page-settings {
+    p{
+        font-family: "Roboto";
+        color: rgb(114, 125, 131) !important;
+        text-align: left;
+        font-size: 15px !important;
+    }
+    .list-ios > .item-block:first-child{
+        border: 0;
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+        border: 0
+    }
+    .item-md,.item-ios{
+        margin-top: 10px
+    }
+    
+}

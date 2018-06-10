@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{recipient.full_name}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="viewPopOver($event)">
+        <img src="assets/imgs/ic_pop_over.png" alt="" class="pop-over" >
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-item *ngFor="let msg of message">
+      <p class="sender-class" *ngIf="msg.sender == sender.id">  {{msg.message}}</p>
+      <p class="receiver-class" *ngIf="msg.sender != sender.id">  {{msg.message}}</p>
+    </ion-item>
+</ion-list>
+
+
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar color="grey-color">
+    <ion-buttons end>
+        <button ion-button icon-only (click)="sendMessage()">
+          <!-- <ion-icon ios="ios-attach" md="md-attach"></ion-icon> -->
+          <img src="assets/imgs/ic_send_message.png" alt="" class="send-button">
+        </button>
+    </ion-buttons>
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <img src="assets/imgs/ic_smiley.png" alt="" class="smiley">
+      </button>
+  </ion-buttons>
+  <!-- <ion-textarea placeholder="Type here" autosize></ion-textarea> -->
+  <ion-textarea type="text" [(ngModel)]="newMessage" placeholder="Type your message" class="message-field"></ion-textarea>
+  </ion-toolbar>
+</ion-footer>

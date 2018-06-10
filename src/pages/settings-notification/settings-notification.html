@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="page-title">Notification and Sounds</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      message notification
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Vibrate</ion-label>
+      <ion-select [(ngModel)]="appVibration" interface="action-sheet" (ionChange)="setVibration($event)">
+        <ion-option>Off</ion-option>
+        <ion-option>Short</ion-option>
+        <ion-option>Long</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Popup Notifications</ion-label>
+      <ion-select [(ngModel)]="appPopup" interface="action-sheet" (ionChange)="setPopup()">
+        <ion-option>No popup</ion-option>
+        <ion-option>Only when screen "on"</ion-option>
+        <ion-option>Only when screen "off"</ion-option>
+        <ion-option>Always show popup</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sound</ion-label>
+      <ion-select [(ngModel)]="appSound" interface="action-sheet" (ionChange)="setSound()">
+        <ion-option>No popup</ion-option>
+        <ion-option>Only when screen "on"</ion-option>
+        <ion-option>Only when screen "off"</ion-option>
+        <ion-option>Always show popup</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Repeat</ion-label>
+      <ion-select [(ngModel)]="appRepeat" interface="action-sheet" (ionChange)="setRepeat()">
+        <ion-option>1 Hr</ion-option>
+        <ion-option>5 Hr</ion-option>
+        <ion-option>5 Mint</ion-option>
+        <ion-option>No Repeat</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-list-header>
+      IN-APP Notifications
+    </ion-list-header>
+    <ion-item>
+      <ion-label >IN-App Sounds</ion-label>
+      <ion-toggle [(ngModel)]="inAppSounds" (ionChange)="selectInAppSound()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>IN-App Vibrations</ion-label>
+      <ion-toggle [(ngModel)]="inAppVibrations" (ionChange)="selectInAppVibrations()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>IN-App Chat Sounds</ion-label>
+      <ion-toggle [(ngModel)]="inAppChatSounds" (ionChange)="selectInAppChatSounds()" ></ion-toggle>
+    </ion-item>
+
+    <ion-list-header>
+        Others
+      </ion-list-header>
+      <ion-item>
+        <ion-label >Keep Alive Service
+          <br><span class="white-space label-desc">
+            Relaunch app when shutdown by user or system. This allows app to show notifications.
+          </span>
+        </ion-label>
+        <ion-toggle [(ngModel)]="keepAlive"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+          <ion-label >Background Connection
+            <br><span class="white-space label-desc">
+              Keep a low background connection to IS3 Talk to receive realtime notifications
+            </span>
+          </ion-label>
+          <ion-toggle [(ngModel)]="backgroundConnection"></ion-toggle>
+        </ion-item>
+      <ion-item>
+        <ion-label>Reset</ion-label>
+        <ion-toggle [(ngModel)]="appReset"></ion-toggle>
+      </ion-item>
+  
+  </ion-list>
+</ion-content>

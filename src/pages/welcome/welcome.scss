@@ -1,0 +1,28 @@
+page-welcome {
+    .welcome-logo{
+        width: 50%;
+        height: 50%;
+    }
+    .welcome-title{
+        margin-top: 25px;
+    }
+    .divider{
+        background-repeat: no-repeat;
+        width: 70%;
+    }
+    .vertical-center{
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    .content-md,.content-ios{
+        background: #1868c2;
+    }
+    .white-color{
+        color: #fff;
+    }
+    .margin-top-40{
+        margin-top: 40px;
+    }
+    
+}

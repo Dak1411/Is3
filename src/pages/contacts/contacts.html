@@ -1,0 +1,29 @@
+<ion-content>
+                <ion-list class="accordion-list">
+                                <ion-item-group>
+                                        <ion-list-header *ngFor="let item of teamList;let i=index"  no-lines [ngClass]="{'display-none':item.items.length===0}" > 
+                                                <ion-row class="margin-top-10" (click)="toggleSection(i)">
+                                                        <ion-col col-5 text-start>
+                                                            <p class="manager-label">{{item.name}}</p>
+                                                        </ion-col>
+                                                        <ion-col col-7>
+                                                            <div class="horizontal-line">
+                                                                <ion-icon [name]="teamList[i].open?'ios-arrow-dropdown-circle-outline':'ios-arrow-dropup-circle-outline'" class="down-arrow"
+                                                                    (click)="listToggle()"></ion-icon>
+                                                            </div>
+                                                        </ion-col>
+                                                    </ion-row>
+                                                    <ion-list  class="inner-list" *ngIf="item.items && item.open ">
+                                                        <ion-item detail-push *ngFor="let children of item.items" class="padding-0 ">
+                                                            <!-- <ion-item > -->
+                                                                    <ion-avatar item-start>
+                                                                        <img src="assets/imgs/ic_avatar.png" class="user-icon">
+                                                                    </ion-avatar>
+                                                                    <h2>{{children.full_name}}</h2>
+                                                           
+                                                        </ion-item>
+                                                    </ion-list>
+                                        </ion-list-header>
+                                </ion-item-group>
+                            </ion-list>
+</ion-content>

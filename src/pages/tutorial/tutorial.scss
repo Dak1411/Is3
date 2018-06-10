@@ -1,0 +1,45 @@
+page-tutorial {
+    .slide-zoom{
+        height: 100% !important;
+    }
+    .slider-image{
+        max-width: 100%;
+        // width: 90%;
+        width: 290px;
+    }
+    .slider-title{
+        color: #1565c0;
+        letter-spacing: 2px;
+        font-weight: bold;
+        margin-bottom: 0;
+        font-size: 20px;
+        margin-top: 1px;
+    }
+    .slider-text{
+        color: #8694a5;
+        padding: 0 26px;
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .slider-divider{
+        width: 40%;
+    }
+    .get-started{
+        height: 55px;
+        margin-top: 10%;
+        background: #1565c0 !important;
+    }
+    .skip-button{
+        position: absolute;
+        bottom: 0;
+        z-index: 1
+    }
+    .skip-button button{
+        //background: transparent;
+        color: #000;
+        margin-left: 10px;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+}

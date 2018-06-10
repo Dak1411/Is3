@@ -1,0 +1,40 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title class="header-title">change your current pin</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding #content>
+    <img src="assets/imgs/ic_tutorial_three.png" style="height:150px;width:150px">
+    <ion-card>
+      <ion-item>
+          <ion-avatar item-end class="margin-bottom-none" *ngIf="validCurrentKey">
+              <img src="assets/imgs/ic_tick.png" class="tick-button">
+            </ion-avatar>
+        <ion-label color="primary" stacked>Your Current PIN</ion-label>
+        <ion-input type="password" placeholder="PIN" (ionChange)='checkCurrentPassword($event)'></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label color="primary" stacked>Enter Your New PIN</ion-label>
+        <ion-input type="password" placeholder="PIN"  [(ngModel)]="newPin"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>RE-Enter Your New PIN</ion-label>
+        <ion-input type="password" placeholder="PIN"  (ionChange)="validateNewPassword($event)"></ion-input>
+      </ion-item>
+    </ion-card>
+    <div class="bottom-button"> 
+        <button ion-button round full class="submit-button"  (click)="goBack()" >UPDATE PIN</button>
+    </div>
+  </ion-content>
+  <ion-footer no-border >
+      <ion-toolbar color="footer">
+          <button ion-button round full class="submit-button" >UPDATE PIN</button>
+      </ion-toolbar>
+  </ion-footer>
+
+  

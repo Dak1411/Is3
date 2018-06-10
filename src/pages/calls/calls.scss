@@ -1,0 +1,49 @@
+page-calls {
+    .call-bg{
+        background-color: rgb(247, 246, 246);
+    }
+    .item-ios.item-block .item-inner,.item-md.item-block .item-inner{
+        border: none
+    }
+    .item-ios,.item-md{
+        border-bottom: 1px solid #d3d3d3 !important ;
+        background: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .user-icon{
+        border: 2px solid #fff;
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .phone-icon{
+        width: 25px !important;
+        height: 30px !important;
+    }
+    .margin-top-15{
+        margin-top: 15px;
+    }
+    .list-ios > .item-block:first-child{
+        border-top: none
+    }
+    .active-user{
+        border-radius: 50%;
+        background-color: greenyellow;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 50px;
+        top: 20px;
+        border: 2px solid #fff;
+    }
+    .fab-button{
+        position: absolute;
+        right: 10px;
+        bottom: 10px
+    }
+    .fab-ios,.fab-md{
+        background: transparent !important;
+        transform: none;
+        box-shadow: none;
+    }
+}

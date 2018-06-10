@@ -1,0 +1,14 @@
+<ion-header no-border>
+        <ion-navbar>
+            <ion-buttons end>
+                <button ion-button icon-only (click)="netWork()"><ion-icon name="notifications"></ion-icon></button>
+            </ion-buttons>
+        </ion-navbar>
+      </ion-header>
+      <ion-content>
+        <super-tabs tabsHighlight="true" tabsPlacement="top" [selectedTabIndex]="mySelectedIndex">
+            <super-tab [root]="allTaskRoot" title="All" ></super-tab>
+            <super-tab [root]="todayTaskRoot" title="Today" ></super-tab>
+            <super-tab [root]="overdueTaskRoot" title="Overdue" ></super-tab>
+        </super-tabs>
+      </ion-content>

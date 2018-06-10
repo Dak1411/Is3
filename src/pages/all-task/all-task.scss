@@ -1,0 +1,93 @@
+page-all-task {
+    .middle-align{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: rgb(55, 71, 79);
+    }
+    .vertical-center{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .left-col{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(202, 205, 209);
+        background-color: rgb(245, 231, 231);
+    }
+    .left-col-all{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(202, 205, 209);
+        background-color: rgb(240, 243, 246);
+    }
+    .right-col{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(202, 205, 209);
+        background-color: rgb(255, 247, 247);
+        opacity: 0.70;
+    }
+    .right-col-all{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(202, 205, 209);
+        background-color: rgb(255, 255, 255);
+        opacity: 0.70;
+    }
+    .day-head{
+        font-family: "Roboto";
+        color: #000;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .month-head{
+        font-size: 15px;
+        font-family: "Roboto";
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .day-head-all{
+        font-family: "Roboto";
+        color: rgb(21, 101, 192);
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .month-head-all{
+        font-size: 15px;
+        font-family: "Roboto";
+        color: rgb(21, 101, 192);
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .time-head{
+        font-size: 13px;
+        font-family: "Roboto";
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .task-head{
+        font-family: "Roboto";
+        color: #000;
+        line-height: 1.293;
+        font-weight: 500;
+        font-size: medium;
+    }
+    .task-desc{
+        text-align: justify;
+        padding-top: 10px;
+    }
+    .exclamation-tick{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+}

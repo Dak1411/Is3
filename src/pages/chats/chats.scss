@@ -1,0 +1,19 @@
+page-chats {
+    .middle-align{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: rgb(55, 71, 79);
+    }
+    .fab-button{
+        position: absolute;
+        right: 10px;
+        bottom: 10px
+    }
+    .fab-ios,.fab-md{
+        background: transparent !important;
+        transform: none;
+        box-shadow: none;
+    }
+}   

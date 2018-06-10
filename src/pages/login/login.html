@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="logo-container">
+      <img class="login-logo" src="assets/imgs/logo.png" />
+      <div class="login-message">
+        <h1 class="welcome-message">Welcome!</h1>
+        <h4 style="color: #828f96;">Enter your <b>Key</b> to Activate</h4>
+      </div>
+      <div class="password-container">
+          <!-- <div>
+            <ion-row style="background: #f6f8fa;border-radius: 64px;height: 53px;">
+              <ion-col col-12>
+                            <ion-input [type]="showPassword?'text':'password'" [(ngModel)]="passPin"  placeholder="Secure Pin" maxlength="8" style="padding-left: 20%;"></ion-input>
+                            <img class="show-password" [src]="showPassword?'assets/imgs/show.png':'assets/imgs/hide.png'" (tap)="passwordToggle()"/> 
+                            <img class="passlock" src="assets/imgs/ic_passlock.png"/> 
+              </ion-col>
+            </ion-row>
+          </div> -->
+          <ion-list>
+            <ion-item class="field-border">
+              <ion-avatar item-start>
+                <img class="passlock" src="assets/imgs/ic_passlock.png"/> 
+            </ion-avatar>
+            <ion-input [type]="showPassword?'text':'password'" [(ngModel)]="passPin"  placeholder="Secure Key" maxlength="8" (window:keydown)="onKey($event)"></ion-input>
+            <ion-avatar item-end>
+              <img class="show-password" [src]="showPassword?'assets/imgs/show.png':'assets/imgs/hide.png'" (click)="passwordToggle()"/> 
+          </ion-avatar>
+            </ion-item>
+          </ion-list>
+          <div>
+              <button ion-button round full class="login-button" (click)="doLogin()">ACTIVATE</button>
+              <p class="secure-message" (click)="noKeyPage()">Don't have a <b>Secure Key?</b></p>
+          </div>
+
+      </div>
+  </div>
+</ion-content>

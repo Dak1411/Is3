@@ -1,0 +1,68 @@
+page-login {
+    .logo-container{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 10%
+    }
+    .login-logo{
+        width: 50%;
+    }
+    .login-message{
+        margin-top: 9vh;
+    }
+    .welcome-message{
+        color: #37474f;
+    }
+    .password-container{
+        height: 55px;
+        border-radius: 64px;
+        // border: 1px solid #bebebe;
+        margin: 0 15px;
+        margin-top: 10vh;
+        .password-symbol{
+            margin-top: 10px;
+            width: 15px;
+            height: 20px;
+        }
+        ion-input{
+            font-size: 14px;
+            color: #bebebe;
+        }
+        .show-password{
+            width: 25px;
+            height: 15px;
+            float: right;
+            position: absolute;
+            right: 0;
+            transform: translateY(-50%);
+            margin-right: 20px;
+            top: 50%
+        }
+    }
+    .login-button{
+        height: 60px;
+        margin-top: 20px;
+        background: #1565c0 !important;
+    }
+    .secure-message{
+        margin-top: 30px;
+        color: #828f96
+    }
+    .passlock{
+        width: 25px !important;
+        height: 25px !important;
+        float: left;
+        position: absolute;
+        left: 35px;
+        transform: translateY(-50%);
+        top: 46%;
+        border-radius: 18% !important;
+    }
+    .field-border{
+        border-radius: 64px;
+        border: 2px solid #C0C0C0 !important;
+        box-shadow: none !important
+    }
+    
+}

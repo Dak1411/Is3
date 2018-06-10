@@ -1,0 +1,58 @@
+<ion-header no-border>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content #myContent>
+    <ion-row class="border-bottom">
+        <ion-col text-center style="padding-top: 5px;">
+            <img src="assets/imgs/ic_avatar.png" class="user-image" />
+            <h3 class="user-name margin-top-10">{{userDetails.full_name}}</h3>
+            <h6 class="user-address margin-top-10">{{userDetails.address_line_a}},{{userDetails.address_line_b}}</h6>
+        </ion-col>
+    </ion-row>
+    <ion-row class="border-bottom">
+        <ion-col class="padding-left-16">
+            <p class="email-label">Email:</p>&nbsp;&nbsp;&nbsp;
+            <span class="email-text">{{userDetails.email}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row class="border-bottom">
+        <ion-col class="padding-left-16">
+            <p class="phone-label">Phone:</p>
+            <span class="phone-text"> {{userDetails.phone}}</span>
+        </ion-col>
+    </ion-row>
+    <div>
+        <ion-list class="accordion-list">
+            <ion-item-group>
+                    <ion-item-divider sticky text-center color="primary">MY TEAM</ion-item-divider>
+                    <ion-list-header *ngFor="let item of teamList;let i=index"  no-lines [ngClass]="{'display-none':item.items.length===0}" > 
+                            <ion-row class="margin-top-10" (click)="toggleSection(i)">
+                                    <ion-col col-5 text-start>
+                                        <p class="manager-label">{{item.name}}</p>
+                                    </ion-col>
+                                    <ion-col col-7>
+                                        <div class="horizontal-line">
+                                            <ion-icon [name]="teamList[i].open?'ios-arrow-dropdown-circle-outline':'ios-arrow-dropup-circle-outline'" class="down-arrow"
+                                                (click)="listToggle()"></ion-icon>
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-list class="inner-list" *ngIf="item.items && item.open "  show-detail>
+                                    <ion-item *ngFor="let children of item.items" class="padding-0 " (click)="chatPage(children)">
+                                        <!-- <ion-item > -->
+                                                <ion-avatar item-start>
+                                                    <img src="assets/imgs/ic_avatar.png" class="user-icon">
+                                                </ion-avatar>
+                                                <h2>{{children.full_name}}</h2>
+                                       
+                                    </ion-item>
+                                </ion-list>
+                    </ion-list-header>
+            </ion-item-group>
+        </ion-list>
+    </div>
+
+</ion-content>

@@ -1,0 +1,112 @@
+<ion-header no-border>
+
+  <ion-navbar>
+    <ion-buttons end>
+        <button ion-button icon-only  (click)="viewPopOver($event)">
+                <img src="assets/imgs/ic_pop_over.png" style="width: 5px;">
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <div text-center>
+    <img src="assets/imgs/ic_avatar.png" class="user-image">
+    <!-- <h3 class="user-name">John Doe</h3>
+    <img src="assets/imgs/ic_message.png" class="chat-image" (click)="chatWithBuddy()">
+    <h5 class="user-role">Social Worker</h5> -->
+    <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4>
+    <h3 class="user-name">{{userDetails.full_name}}</h3>
+    <h5 class="user-role">{{userDetails.role}}</h5>
+        </ion-col>
+        <ion-col col-4 style="text-align: right;padding-right: 10px;">
+                <img src="assets/imgs/ic_message.png" class="chat-icon" (click)="chatWithBuddy()">
+        </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-toolbar>
+      <ion-segment [(ngModel)]="category" color="primary">
+        <ion-segment-button value="team">
+         TEAM
+        </ion-segment-button>
+        <ion-segment-button value="profile">
+          PROFILE
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div [ngSwitch]="category">
+        <ion-list class="accordion-list" *ngSwitchCase="'team'">
+            <ion-item-group>
+                    <ion-list-header *ngFor="let item of teamList;let i=index"  no-lines [ngClass]="{'display-none':item.items.length==0}"> 
+                            <ion-row class="margin-top-10" (click)="toggleSection(i)">
+                                    <ion-col col-5 text-start>
+                                        <p class="manager-label">{{item.name}}</p>
+                                    </ion-col>
+                                    <ion-col col-7>
+                                        <div class="horizontal-line">
+                                            <ion-icon [name]="teamList[i].open?'ios-arrow-dropdown-circle-outline':'ios-arrow-dropup-circle-outline'" class="down-arrow"
+                                                (click)="listToggle()"></ion-icon>
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-list class="inner-list" *ngIf="item.items && item.open " >
+                                    <ion-item *ngFor="let children of item.items" class="padding-0 "  detail-push (click)="buddyChat(children)">
+                                        <!-- <ion-item > -->
+                                                <ion-avatar item-start>
+                                                    <img src="assets/imgs/ic_avatar.png" class="user-icon">
+                                                </ion-avatar>
+                                                <h2>{{children.full_name}}</h2>
+                                       
+                                    </ion-item>
+                                </ion-list>
+                    </ion-list-header>
+            </ion-item-group>
+        </ion-list>
+        <ion-list *ngSwitchCase="'profile'" padding>
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">case id</h4>
+                <p class="field-value">-</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">Address</h4>
+                <p class="field-value">{{userDetails.address_line_a}},{{userDetails.address_line_b}}</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">Phone Number</h4>
+                <p class="field-value">{{userDetails.phone}}</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">email</h4>
+                <p class="field-value">{{userDetails.email}}</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">Category</h4>
+                <p class="field-value">General</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">User Info</h4>
+                <p class="field-value">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10" style="border-bottom: 1px solid #d3d3d3 !important">
+                <h4 class="to-upper field-head">council</h4>
+                <p class="field-value">Southend-On-Sea</p>
+            </ion-item>
+
+            <ion-item class="padding-0 margin-top-10">
+                <h4 class="to-upper field-head">department</h4>
+                <p class="field-value">CM 16</p>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+

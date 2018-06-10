@@ -1,0 +1,69 @@
+<ion-content>
+  <div class="div-30">
+    <p text-center class="text-head">Enter your 4-Digit PIN to continue</p>
+    <ion-row text-center style="    padding-top: 10px;">
+        <ion-col col-1>
+        </ion-col>
+        <ion-col col-10>
+          <div class="pass-codes">
+            <input type="password" readonly="true" value="{{passCode.substring(0, 1)}}" class="pin-field">
+            <input type="password" readonly="true" value="{{passCode.substring(1, 2)}}" class="pin-field">
+            <input type="password" readonly="true" value="{{passCode.substring(2, 3)}}" class="pin-field">
+            <input type="password" readonly="true" value="{{passCode.substring(3, 4)}}" class="pin-field" style="margin:0">
+
+          </div>
+        </ion-col>
+        <ion-col col-1>
+        </ion-col>
+      </ion-row>
+  </div>
+  <div class="div-70">
+      <div style="padding-top: 30px">
+          <ion-row>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(1)">1</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(2)">2</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(3)">3</button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(4)">4</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(5)">5</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(6)">6</button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(7)">7</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(8)">8</button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(9)">9</button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4 text-center></ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button class="digit" (click)="add(0)">0 </button>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/ic_white_backspace.png" class="back-space" (click)="delete()" />
+            </ion-col>
+          </ion-row>
+        </div>
+        <div text-center class="forgot-class">
+            <p style="margin: 0;" (click)="forgotPin()">Forgot your PIN?</p>
+        </div>
+  </div>
+</ion-content>

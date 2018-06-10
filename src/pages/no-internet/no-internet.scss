@@ -1,0 +1,32 @@
+page-no-internet {
+    .broken-net{
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    .top-text{
+        position: relative;
+        top: 25%;
+        text-align: center;
+    
+    }
+    .bottom-text{
+        position: absolute;
+        bottom: 15%;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: "Roboto";
+        color: rgb(55, 71, 79);
+        font-size: large;
+        font-weight: 500;
+    }
+    .retry-button{
+        height: 60px;
+        width: 100%;
+        border-radius: 30px;
+        background: #1565c0 !important;
+        color: #fff !important;
+        letter-spacing: 1px;
+    }
+}

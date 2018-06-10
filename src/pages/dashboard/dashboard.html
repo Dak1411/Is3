@@ -1,0 +1,59 @@
+<ion-header no-border #head>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="viewNotifications()">
+                <ion-icon ios="ios-notifications" md="md-notifications"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="logo-div">
+        <img class="counsil-logo" src="assets/imgs/ic_southend_logo.png" />
+    </div>
+    <div class="menu-section">
+        <div class="intro-div">
+            <h6 class="cm16-head">CM 16 Care</h6>
+            <p class="cm16-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+            </p>
+        </div>
+        <div class="menu-sub-section">
+            <ion-row>
+                <ion-col col-4 (click)="featureNavigation('SocialPage','1')" text-center>
+                    <img src="assets/imgs/ic_chats.png" alt="" class="menu-icon">
+                    <h6 class="menu-name">Chats</h6>
+                </ion-col>
+                <ion-col col-4 (click)="featureNavigation('TaskPage','1')" text-center>
+                        <img src="assets/imgs/ic_tasks.png" alt="" class="menu-icon">
+                        <h6 class="menu-name">Tasks</h6>
+                </ion-col  >
+                <ion-col col-4 (click)="featureNavigation('BroadcastPage','')" text-center>
+                        <img src="assets/imgs/ic_broadcast.png" alt="" class="menu-icon">
+                        <h6 class="menu-name">Broadcast</h6>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                    <ion-col col-4 (click)="featureNavigation('SocialPage','2')" text-center>
+                        <img src="assets/imgs/ic_calls.png" alt="" class="menu-icon">
+                        <h6 class="menu-name">Calls</h6>
+                    </ion-col>
+                    <ion-col col-4 (click)="featureNavigation('FaqPage','')" text-center>
+                            <img src="assets/imgs/ic_faq.png" alt="" class="menu-icon">
+                            <h6 class="menu-name">FAQ</h6>
+                    </ion-col  >
+                    <ion-col col-4 (click)="featureNavigation('KeyinfoPage','')" text-center>
+                            <img src="assets/imgs/ic_key_info.png" alt="" class="menu-icon">
+                            <h6 class="menu-name">KEY INFO</h6>
+                    </ion-col>
+                </ion-row>
+        </div>
+    </div>
+</ion-content>

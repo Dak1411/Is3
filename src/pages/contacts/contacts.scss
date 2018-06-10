@@ -1,0 +1,66 @@
+page-contacts {
+    .accordion-list {
+        background: #fff;
+        height: 100%;
+        margin: 0
+    }
+    .item-md-primary, .item-divider-md-primary,.item-ios-primary, .item-divider-ios-primary{
+        color: #fff;
+        background-color: rgb(21, 101, 192);
+        letter-spacing: 1px;
+    }
+    .inner-list{
+        margin: 0;
+    }
+    .list-header-md,.list-header-ios{
+        margin-bottom: 0
+    }
+    .label-md,.label-ios{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .item-ios h2{
+        text-transform: none
+    }
+    .display-none{
+        display: none
+    }
+    .margin-top-10{
+        margin-top: 10px;
+    }
+    .manager-label{
+        font-size: 15px;
+        font-weight: bold;
+        color: #000;
+        padding-top: 4px;
+    }
+    .horizontal-line{
+        height: 1px;
+        width: 75%;
+        background: #bebebe;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .down-arrow{
+        float: right;
+        font-size: 30px;
+        position: relative;
+        top: -14px;
+        left: 40px;
+    }
+    .inner-list{
+        margin: 0;
+    }
+    .padding-0{
+        padding: 0
+    }
+    .list-ios > .item-block:first-child,{
+        border: none !important
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+        border: none !important
+    }
+
+
+}

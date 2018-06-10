@@ -1,0 +1,36 @@
+
+<ion-content padding>
+    <ion-list no-lines>
+        <ion-item class="head-class" >
+         <h3 text-center style="font-weight: 500;font-size: 20px;">PIN RETRIEVAL</h3>
+        </ion-item>
+      
+        <ion-item >
+          <p text-center>In case you forget your PIN, you can reset it <br>by answering the following security question. </p>
+        </ion-item>
+      
+        <ion-item>
+          <img src="assets/imgs/ic_horizontal_line.png" class="horizontal-divider"/>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label class="question-label">Question</ion-label>
+            <ion-select [(ngModel)]="securityQuestion" class="" interface="action-sheet" (ionChange)="selectQuestion()" style="padding-left:0;width:100%;max-width: 100%;border-bottom: 1px solid #919191">
+                <ion-option>Bacon</ion-option>
+                <ion-option>Black Olives</ion-option>
+                <ion-option>Extra Cheese</ion-option>
+                <ion-option>Mushrooms</ion-option>
+                <ion-option>Pepperoni</ion-option>
+                <ion-option>Sausage</ion-option>
+            </ion-select>
+        </ion-item>
+      
+          
+          <ion-item class="margin-top-10">
+            <ion-label color="primary" stacked class="answer-label">Your Answer</ion-label>
+          <ion-input class="answer-field" type="text" [(ngModel)]="securityAnswer"></ion-input>
+          </ion-item>
+      </ion-list>
+      <button ion-button round full primary class="submit-button" (click)="validateSecurityQAns()">SUBMIT</button>
+</ion-content>
+
